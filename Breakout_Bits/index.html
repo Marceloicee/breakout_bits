@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Breakout Bits: jogo arcade responsivo de quebra-blocos.">
+  <title>Breakout Bits</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header class="game-header">
+      <span class="eyebrow">ARCADE CLASSIC</span>
+      <h1>BREAKOUT <span>BITS</span></h1>
+      <p>Destrua os tijolos. Domine a trajetória. Supere seus limites.</p>
+    </header>
+
+    <section class="game-hud" aria-label="Informações da partida">
+      <div class="hud-card"><span class="hud-label">PONTUAÇÃO</span><strong id="score">000000</strong></div>
+      <div class="hud-card"><span class="hud-label">NÍVEL</span><strong id="level">01</strong></div>
+      <div class="hud-card"><span class="hud-label">VIDAS</span><strong id="lives">♥ ♥ ♥</strong></div>
+    </section>
+
+    <section class="game-frame" aria-label="Área do jogo">
+      <canvas id="game" width="480" height="600" aria-label="Jogo Breakout Bits" tabindex="0">
+        Seu navegador não suporta Canvas.
+      </canvas>
+      <div id="overlay" class="overlay">
+        <div class="overlay-content">
+          <span id="overlay-tag" class="overlay-tag">READY PLAYER</span>
+          <h2 id="overlay-title">BREAKOUT BITS</h2>
+          <p id="overlay-message">Destrua todos os tijolos e avance pelos níveis.</p>
+          <button id="start-button" type="button">INICIAR JOGO</button>
+        </div>
+      </div>
+      <div id="announcement" class="announcement" aria-live="polite"></div>
+    </section>
+
+    <footer class="game-footer">
+      <p><kbd>←</kbd> <kbd>→</kbd> ou <kbd>A</kbd> <kbd>D</kbd> mover</p>
+      <p><kbd>ESPAÇO</kbd> lançar</p>
+      <p><kbd>P</kbd>/<kbd>ESC</kbd> pausar</p>
+      <p><kbd>R</kbd> reiniciar</p>
+    </footer>
+    <p class="mobile-hint">No celular, toque ou arraste na área do jogo. Toque com a bola pronta para lançar.</p>
+  </main>
+</body>
+</html>
